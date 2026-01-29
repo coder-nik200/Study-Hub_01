@@ -1,19 +1,29 @@
 const generate = require("../ChatBot/Gemini-2.5");
+const { getFallBackReply } = require("./fallBackBot");
 
-// Express controller
 const getGeminiResponse = async (req, res) => {
+  const { message } = req.body;
+
+  if (!message || message.trim() === "") {
+    return res.json({ reply: "Please ask something 🙂" });
+  }
+
   try {
-    const { message } = req.body;
-
-    if (!message || message.trim() === "") {
-      return res.json({ reply: "Please ask something 🙂" });
-    }
-
     const reply = await generate(message);
-    res.json({ reply });
-  } catch (err) {
-    console.error("Controller error:", err);
-    res.status(500).json({ reply: "Server error 🤖" });
+
+    return res.json({
+      reply,
+      mode: "gemini",
+    });
+  } catch (error) {
+    console.error("❌ Gemini failed → using fallback 🤖");
+
+    const fallbackReply = getFallBackReply(message);
+
+    return res.json({
+      reply: fallbackReply,
+      mode: "fallback",
+    });
   }
 };
 

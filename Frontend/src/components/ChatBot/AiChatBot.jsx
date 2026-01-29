@@ -92,7 +92,12 @@ function AiChatBot() {
               <button onClick={resetChat}>
                 <RotateCcw size={18} />
               </button>
-              <button onClick={() => setIsOpen(false)}>
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  // resetChat();
+                }}
+              >
                 <X size={18} />
               </button>
             </div>

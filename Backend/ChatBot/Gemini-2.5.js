@@ -12,15 +12,19 @@ const generate = async (prompt) => {
       contents: prompt,
     });
 
-    console.log("Raw Response:", JSON.stringify(response, null, 2));
-
     // Correctly extract the text from parts
     const reply = response?.candidates?.[0]?.content?.parts?.[0]?.text;
 
-    return reply || "Sorry, I couldn't generate a response 🤖";
+    if (!reply) {
+      throw new Error("Empty Gemini response");
+    }
+
+    return reply;
   } catch (err) {
-    console.error("Gemini generate error:", err);
-    return "Gemini AI error 🤖";
+    // console.error("Gemini generate error:", err.message);
+
+    // 🔥 CRITICAL FIX
+    throw err; // ✅ DO NOT RETURN STRING
   }
 };
 

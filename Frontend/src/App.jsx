@@ -11,6 +11,7 @@ import Tips from "./components/Tips/Tips";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./components/Dashboard/Dashboard";
+import AiChatBot from "./components/ChatBot/AiChatBot";
 
 const App = () => {
   const { user } = useContext(UserContext);
@@ -33,6 +34,8 @@ const App = () => {
       <div className="pt-10">
         <Navbar />
       </div>
+      {user ? <AiChatBot /> : null}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

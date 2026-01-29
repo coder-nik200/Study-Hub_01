@@ -1,0 +1,392 @@
+[
+  { "keyword": "hello", "reply": "Hello 👋! Glad to see you on StudyHub 📚" },
+  { "keyword": "hi", "reply": "Hi there! Welcome back to StudyHub 😃" },
+  { "keyword": "hey", "reply": "Hey! Ready to boost your studies today? 🚀" },
+
+  { "keyword": "owner", "reply": "Nitish is the proud owner of StudyHub 👨‍💻✨" },
+  {
+    "keyword": "creator",
+    "reply": "StudyHub was created by Nitish, a passionate developer 💡"
+  },
+  {
+    "keyword": "who made studyhub",
+    "reply": "StudyHub was built with love by Nitish 👨‍💻"
+  },
+  {
+    "keyword": "who created studyhub",
+    "reply": "The brains behind StudyHub is Nitish, your friendly developer ✨"
+  },
+  {
+    "keyword": "who created you",
+    "reply": "I was created by Nitish to help you learn better 🤖📚"
+  },
+
+  {
+    "keyword": "developer",
+    "reply": "Nitish, a BCA student and full-stack learner, developed StudyHub 🚀"
+  },
+  {
+    "keyword": "admin",
+    "reply": "Nitish manages StudyHub and ensures everything runs smoothly 🔐"
+  },
+
+  {
+    "keyword": "studyhub",
+    "reply": "StudyHub is your all-in-one learning companion for notes, tasks, and projects 📚✨"
+  },
+  {
+    "keyword": "what is study hub",
+    "reply": "StudyHub helps students understand DBMS, OS, DSA, and coding easily 📘"
+  },
+  {
+    "keyword": "dashboard",
+    "reply": "Your dashboard shows your progress, recent topics, and saved notes 📊"
+  },
+  {
+    "keyword": "login",
+    "reply": "Use your registered email and password to login safely 🔐"
+  },
+  {
+    "keyword": "signup",
+    "reply": "Sign up with your email to start using StudyHub 👨‍🎓"
+  },
+  {
+    "keyword": "register",
+    "reply": "Create your student account on StudyHub and unlock features ✨"
+  },
+
+  {
+    "keyword": "notes",
+    "reply": "Access clear and concise BCA notes for quick learning 📄"
+  },
+  {
+    "keyword": "syllabus",
+    "reply": "Check your semester-wise syllabus in StudyHub for structured study 📘"
+  },
+  {
+    "keyword": "exam",
+    "reply": "Prepare for exams with focused notes and practice questions 📝"
+  },
+  {
+    "keyword": "important questions",
+    "reply": "Review important topic-wise questions to boost your scores ⭐"
+  },
+  {
+    "keyword": "coding",
+    "reply": "Practice coding exercises like arrays, loops, and functions 💻"
+  },
+  {
+    "keyword": "mern",
+    "reply": "Learn the MERN stack: MongoDB, Express, React, Node.js 🚀"
+  },
+  {
+    "keyword": "bca project",
+    "reply": "StudyHub itself is a perfect BCA project integrating full-stack concepts 🎓"
+  },
+
+  {
+    "keyword": "dbms",
+    "reply": "Understand how to store and manage data efficiently with DBMS 📚"
+  },
+  {
+    "keyword": "sql",
+    "reply": "Learn SQL queries with examples and hands-on practice 🧠"
+  },
+
+  {
+    "keyword": "operating system",
+    "reply": "OS manages your computer resources efficiently ⚙️"
+  },
+  {
+    "keyword": "os",
+    "reply": "Explore key OS concepts like processes, memory, and scheduling ⚙️"
+  },
+  {
+    "keyword": "dsa",
+    "reply": "Master Data Structures & Algorithms for optimized coding 🚀"
+  },
+  {
+    "keyword": "array",
+    "reply": "Arrays help you store multiple values in one place 📦"
+  },
+  {
+    "keyword": "stack",
+    "reply": "A stack lets you manage data LIFO style, like Undo ↩️"
+  },
+  {
+    "keyword": "queue",
+    "reply": "Queues follow FIFO order, just like waiting in line ⏳"
+  },
+
+  {
+    "keyword": "network",
+    "reply": "Learn how devices connect and share data in networks 🌐"
+  },
+  {
+    "keyword": "ip address",
+    "reply": "An IP address identifies a device uniquely on the network 📡"
+  },
+  {
+    "keyword": "http",
+    "reply": "HTTP lets your browser communicate with websites 🌍"
+  },
+
+  {
+    "keyword": "mongodb",
+    "reply": "MongoDB stores data in flexible JSON-like documents 📂"
+  },
+  {
+    "keyword": "mongoose",
+    "reply": "Mongoose makes MongoDB easier to work with in Node.js 🧩"
+  },
+
+  {
+    "keyword": "computer",
+    "reply": "A computer processes data into useful information 💻"
+  },
+  { "keyword": "cpu", "reply": "The CPU is the brain of your computer 🧠" },
+  {
+    "keyword": "ram",
+    "reply": "RAM temporarily holds data your computer is using ⚡"
+  },
+
+  {
+    "keyword": "capital of india",
+    "reply": "New Delhi is the capital of India 🦚"
+  },
+  {
+    "keyword": "india",
+    "reply": "India is a diverse country with rich culture 🇮🇳"
+  },
+  {
+    "keyword": "punjab",
+    "reply": "Punjab is famous for its agriculture and vibrant traditions 🌾"
+  },
+  {
+    "keyword": "largest country",
+    "reply": "Russia is the largest country by land area 🌍"
+  },
+  {
+    "keyword": "smallest country",
+    "reply": "Vatican City is the smallest country in the world 🇻🇦"
+  },
+
+  {
+    "keyword": "motivate",
+    "reply": "Remember: Small daily progress leads to big success 💪📘"
+  },
+  {
+    "keyword": "study tip",
+    "reply": "Study in 45-min chunks, take 10-min breaks, and repeat 🧠⏱️"
+  },
+  {
+    "keyword": "who are you",
+    "reply": "I am StudyHub Assistant 🤖, here to make learning easier 📚"
+  },
+  {
+    "keyword": "what are you",
+    "reply": "I am your StudyHub Assistant 🤖, ready to help you study 📘"
+  },
+  {
+    "keyword": "help",
+    "reply": "I can assist you with notes, coding, exams, and StudyHub features 😊"
+  },
+
+  {
+    "keyword": "bca",
+    "reply": "BCA stands for Bachelor of Computer Applications 🎓"
+  },
+  {
+    "keyword": "semester",
+    "reply": "Access semester-wise study materials for better preparation 📘"
+  },
+  {
+    "keyword": "javascript",
+    "reply": "JavaScript makes websites interactive and dynamic ⚡"
+  },
+  {
+    "keyword": "nodejs",
+    "reply": "Node.js runs JavaScript on the server side 🚀"
+  },
+  {
+    "keyword": "react",
+    "reply": "React helps build modern, interactive UIs 🧩"
+  },
+
+  {
+    "keyword": "api",
+    "reply": "APIs let software apps communicate with each other 🔗"
+  },
+  {
+    "keyword": "rest api",
+    "reply": "REST APIs use HTTP methods like GET, POST, PUT, DELETE 🌐"
+  },
+  {
+    "keyword": "database",
+    "reply": "A database stores organized information for easy access 📂"
+  },
+  {
+    "keyword": "foreign key",
+    "reply": "Foreign keys link tables together in a database 🔑"
+  },
+  {
+    "keyword": "primary key",
+    "reply": "Primary keys uniquely identify records in a table 🆔"
+  },
+
+  {
+    "keyword": "cloud",
+    "reply": "Cloud lets you access data and apps over the internet ☁️"
+  },
+  {
+    "keyword": "ai",
+    "reply": "AI stands for Artificial Intelligence 🤖, making smart decisions"
+  },
+
+  {
+    "keyword": "india population",
+    "reply": "India is one of the most populated countries 🇮🇳"
+  },
+  {
+    "keyword": "world",
+    "reply": "Earth is the only planet known to support life 🌍"
+  },
+
+  {
+    "keyword": "goal",
+    "reply": "StudyHub’s goal is to simplify learning and improve efficiency 🎯"
+  },
+  {
+    "keyword": "success",
+    "reply": "Success comes with consistency, effort, and smart learning 🔑"
+  },
+
+  {
+    "keyword": "project name",
+    "reply": "The project is named StudyHub — your learning platform 📚"
+  },
+  {
+    "keyword": "studyhub project",
+    "reply": "StudyHub is a full-stack project integrating notes, quizzes, and coding 🎓"
+  },
+
+  {
+    "keyword": "What can studyhub do",
+    "reply": "StudyHub guides students with ideas, projects, and sample code 💡"
+  },
+  {
+    "keyword": "description",
+    "reply": "StudyHub lets you access notes, practice questions, and track progress 🚀"
+  },
+  {
+    "keyword": "about studyhub",
+    "reply": "StudyHub is your personal assistant for learning efficiently 📘"
+  },
+  {
+    "keyword": "platform type",
+    "reply": "StudyHub is an Educational Web App, accessible via desktop & mobile 💻📱"
+  },
+  {
+    "keyword": "type of studyhub",
+    "reply": "It’s an educational platform to simplify studying on any device 📱💻"
+  },
+  {
+    "keyword": "target users",
+    "reply": "Students, teachers, admins, and developers can use StudyHub 🎓"
+  },
+  {
+    "keyword": "who can use studyhub",
+    "reply": "StudyHub is designed for learners and educators of all levels ✨"
+  },
+  {
+    "keyword": "goals",
+    "reply": "StudyHub aims to improve learning efficiency and exam preparation 🎯"
+  },
+  {
+    "keyword": "aim",
+    "reply": "StudyHub’s aim is to organize study material for easier learning 📘"
+  },
+
+  {
+    "keyword": "student features",
+    "reply": "Students can register, access notes, attempt quizzes, and track progress 📄📝"
+  },
+  {
+    "keyword": "admin features",
+    "reply": "Admins can manage content, create quizzes, and monitor users 🔐📊"
+  },
+  {
+    "keyword": "general features",
+    "reply": "Responsive design, search, dashboards, multi-language, and chatbot support 🌐"
+  },
+  {
+    "keyword": "platform features",
+    "reply": "StudyHub provides interactive dashboards, search, and learning tools ✨"
+  },
+
+  {
+    "keyword": "subjects",
+    "reply": "StudyHub covers DBMS, OS, DSA, Networks, Web Dev, and programming 💻"
+  },
+  {
+    "keyword": "courses",
+    "reply": "Available courses include programming, DBMS, OS, and web development 📘"
+  },
+  {
+    "keyword": "resources",
+    "reply": "Access notes, PDFs, MCQs, previous papers, and sample projects 📂"
+  },
+  {
+    "keyword": "materials",
+    "reply": "StudyHub provides study materials like notes, PDFs, and practice questions 📄"
+  },
+  {
+    "keyword": "difficulty levels",
+    "reply": "Content is organized as Beginner, Intermediate, and Advanced 📘"
+  },
+  {
+    "keyword": "levels",
+    "reply": "Choose content based on your skill: Beginner, Intermediate, or Advanced 🎯"
+  },
+
+  {
+    "keyword": "chatbot",
+    "reply": "Our chatbot helps with study queries, projects, and motivation 🤖"
+  },
+  {
+    "keyword": "assistant",
+    "reply": "The StudyHub assistant can guide you with learning and coding tips ✨"
+  },
+
+  {
+    "keyword": "tech stack",
+    "reply": "Tech stack: React, Tailwind, Node.js, Express, MongoDB, Mongoose ✨"
+  },
+  {
+    "keyword": "technology",
+    "reply": "StudyHub uses modern tech: React frontend, Node.js backend, MongoDB database 🚀"
+  },
+
+  {
+    "keyword": "user roles",
+    "reply": "Student: study and track progress; Admin: manage content and users 👥"
+  },
+  {
+    "keyword": "roles",
+    "reply": "StudyHub has Students and Admins with specific access rights 🔐"
+  },
+
+  {
+    "keyword": "future plans",
+    "reply": "Upcoming: live classes, mobile app, AI recommendations, and certificates 🚀"
+  },
+  {
+    "keyword": "roadmap",
+    "reply": "StudyHub plans include gamification, community forums, and AI-based learning ✨"
+  },
+
+  {
+    "keyword": "motivation",
+    "reply": "Stay consistent and disciplined for better results 🔑"
+  }
+]
