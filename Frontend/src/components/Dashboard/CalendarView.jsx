@@ -184,7 +184,7 @@ const CalendarView = ({ tasks = [] }) => {
                               : task.priority === "medium"
                                 ? "bg-yellow-100 text-yellow-700"
                                 : "bg-green-100 text-green-700"
-                          }${
+                          } ${
                             task.completed
                               ? "line-through opacity-60"
                               : "hover:scale-[1.03] hover:shadow-sm"

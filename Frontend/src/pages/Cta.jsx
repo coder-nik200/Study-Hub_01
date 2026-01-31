@@ -10,7 +10,10 @@ const Cta = () => {
     if (user) {
       navigate("/dashboard");
     } else {
-      navigate("/login");
+      navigate("/", {
+        state: { openLogin: true },
+        replace: true,
+      });
     }
   };
 

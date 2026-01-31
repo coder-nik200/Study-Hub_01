@@ -1,33 +1,51 @@
 import { useContext, useState, useEffect, useRef } from "react";
 import { UserContext } from "../context/UserContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { BookOpen, Menu, X, User, LogOut } from "lucide-react";
 import { toast } from "react-toastify";
 import api from "../api/axios";
+import LoginPage from "./LoginPage";
+import SignupPage from "./SignupPage";
 
 const Navbar = () => {
   const { user, setUser } = useContext(UserContext);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const navigate = useNavigate();
+  const [openLogin, setOpenLogin] = useState(false);
+  const [openSign, setOpenSign] = useState(false);
 
   const userMenuRef = useRef(null);
   const mobileMenuRef = useRef(null);
-  const menuButtonRef = useRef(null); // ✅ IMPORTANT
+  const menuButtonRef = useRef(null);
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogout = async () => {
     try {
       await api.post("/logout", {}, { withCredentials: true });
       setUser(null);
       toast.success("Logged out successfully");
-      navigate("/login");
+      setIsUserMenuOpen(false);
+      setOpenLogin(true); // ✅ OPEN LOGIN MODAL
     } catch (error) {
       console.error("Error signing out:", error);
+      toast.error("Logout failed");
     }
   };
 
-  // 🔹 Close user menu
+  // Authenticate Dashboard
+  useEffect(() => {
+    if (location.state?.openLogin) {
+      setOpenLogin(true);
+    }
+    if (location.state?.openSignup) {
+      setOpenSign(true);
+    }
+  }, [location.state]);
+
+  // Close user menu
   useEffect(() => {
     const handleClick = (e) => {
       if (userMenuRef.current && !userMenuRef.current.contains(e.target)) {
@@ -38,7 +56,7 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  // 🔹 Close mobile menu (CORRECT LOGIC)
+  // Close mobile menu
   useEffect(() => {
     const handleOutsideClick = (e) => {
       if (
@@ -121,24 +139,26 @@ const Navbar = () => {
               </div>
             ) : (
               <div className="hidden md:flex items-center gap-4">
-                <Link
-                  to="/login"
+                <button
                   className="px-4 py-2 rounded-md border-2 font-semibold border-blue-900 text-blue-900 hover:bg-indigo-600 hover:text-white transition hover:-translate-y-1 hover:shadow-2xl"
+                  onClick={() => setOpenLogin(true)}
                 >
                   Login
-                </Link>
-                <Link
-                  to="/signup"
-                  className="px-4 py-2 rounded-md font-semibold bg-indigo-600 text-white hover:bg-indigo-700 transition hover:-translate-y-1 hover:shadow-2xl"
+                </button>
+
+                <button
+                  className="px-4 py-2 rounded-md font-semibold bg-indigo-600 text-white
+                   hover:bg-indigo-700 transition hover:-translate-y-1 hover:shadow-2xl"
+                  onClick={() => setOpenSign(true)}
                 >
                   Sign Up
-                </Link>
+                </button>
               </div>
             )}
 
             {/* Mobile Toggle */}
             <button
-              ref={menuButtonRef} // ✅ KEY FIX
+              ref={menuButtonRef}
               onClick={() => setIsMenuOpen((prev) => !prev)}
               className="md:hidden p-2 rounded-md hover:bg-gray-100"
             >
@@ -154,7 +174,7 @@ const Navbar = () => {
           <div className="flex flex-col items-center gap-4 py-6">
             <Link
               to="/"
-              className="mobile-link"
+              className="nav-link"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
@@ -162,7 +182,7 @@ const Navbar = () => {
             {user && (
               <Link
                 to="/dashboard"
-                className="mobile-link"
+                className="nav-link"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Dashboard
@@ -170,28 +190,64 @@ const Navbar = () => {
             )}
             <Link
               to="/tips"
-              className="mobile-link"
+              className="nav-link"
               onClick={() => setIsMenuOpen(false)}
             >
               Study Tips
             </Link>
             <Link
               to="/about"
-              className="mobile-link"
+              className="nav-link"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="mobile-link"
+              className="nav-link"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact Us
             </Link>
+            {!user && (
+              <>
+                <button
+                  className="bg-indigo-600 w-full text-white rounded-xl hover:bg-indigo-700"
+                  onClick={() => setOpenLogin(true)}
+                >
+                  Login
+                </button>
+
+                <button
+                  className="bg-indigo-600 w-full text-white rounded-xl hover:bg-indigo-700"
+                  onClick={() => setOpenSign(true)}
+                >
+                  Sign Up
+                </button>
+              </>
+            )}
           </div>
         </div>
       )}
+
+      {/* Models */}
+      <LoginPage
+        isOpen={openLogin}
+        setIsOpen={setOpenLogin}
+        openSignup={() => {
+          setOpenLogin(false);
+          setOpenSign(true);
+        }}
+      />
+
+      <SignupPage
+        isOpen={openSign}
+        setIsOpen={setOpenSign}
+        openLogin={() => {
+          setOpenSign(false);
+          setOpenLogin(true);
+        }}
+      />
     </nav>
   );
 };

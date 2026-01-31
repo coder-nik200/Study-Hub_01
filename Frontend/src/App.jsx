@@ -1,15 +1,13 @@
 import { ToastContainer } from "react-toastify";
 import { useContext } from "react";
 import { UserContext } from "./context/UserContext";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Navbar from "./pages/Navbar";
 import Footer from "./pages/Footer";
 import Home from "./pages/Home";
 import Contact from "./components/Contact";
 import About from "./components/About/About";
 import Tips from "./components/Tips/Tips";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
 import Dashboard from "./components/Dashboard/Dashboard";
 import AiChatBot from "./components/ChatBot/AiChatBot";
 
@@ -41,9 +39,16 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/tips" element={<Tips />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/dashboard" element={user ? <Dashboard /> : <Login />} />
+        <Route
+          path="/dashboard"
+          element={
+            user ? (
+              <Dashboard />
+            ) : (
+              <Navigate to="/" state={{ openLogin: true }} replace />
+            )
+          }
+        />
       </Routes>
 
       <Footer />
